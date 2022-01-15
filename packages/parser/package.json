@@ -1,0 +1,48 @@
+{
+  "name": "@nobolog/parser",
+  "version": "1.0.0",
+  "description": "Parser for Nobolog programming language.",
+  "license": "MIT",
+  "keywords": [
+    "nobolog",
+    "parser"
+  ],
+  "author": "Rauli Laine <rauli.laine@iki.fi>",
+  "homepage": "https://github.com/RauliL/nobolog",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RauliL/nobolog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RauliL/nobolog/issues"
+  },
+  "main": "./lib/index.js",
+  "main:src": "./src/index.ts",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "./lib"
+  ],
+  "engines": {
+    "node": ">=12.0"
+  },
+  "scripts": {
+    "clean": "rimraf './lib'",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint './src/**/*.ts'",
+    "prepack": "yarn run build"
+  },
+  "dependencies": {
+    "@nobolog/lexer": "^1.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4",
+    "yarn": "^1.22.17"
+  }
+}
