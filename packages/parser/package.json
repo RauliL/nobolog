@@ -1,6 +1,6 @@
 {
   "name": "@nobolog/parser",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Parser for Nobolog programming language.",
   "license": "MIT",
   "keywords": [
@@ -33,7 +33,7 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@nobolog/lexer": "^1.0.0"
+    "@nobolog/lexer": "^0.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.9.1",

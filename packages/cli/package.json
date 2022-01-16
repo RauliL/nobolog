@@ -1,6 +1,6 @@
 {
   "name": "@nobolog/cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "CLI for Nobolog programming language.",
   "license": "MIT",
   "keywords": [
@@ -36,7 +36,7 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@nobolog/runtime": "^1.0.0",
+    "@nobolog/runtime": "^0.1.0",
     "ts-command-line-args": "^2.2.0",
     "version": "^0.1.2"
   },

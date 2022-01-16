@@ -1,6 +1,6 @@
 {
   "name": "@nobolog/lexer",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Lexer for Nobolog programming language.",
   "license": "MIT",
   "keywords": [
