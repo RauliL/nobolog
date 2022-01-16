@@ -5,4 +5,5 @@ export { equals } from "./equals";
 export { multiply } from "./multiply";
 export { substract } from "./substract";
 export { toBoolean } from "./to-boolean";
+export { toSource } from "./to-source";
 export { toString } from "./to-string";

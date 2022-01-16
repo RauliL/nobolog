@@ -1,4 +1,4 @@
-import { Term } from "./term";
+import { Term, operations } from "./term";
 import { World } from "./world";
 
 export type Clause = (args: Term[], world: World) => boolean;
@@ -16,7 +16,7 @@ export const createClauseMap = (): Map<string, Clause[]> => {
 
   mapping.set("print/1", [
     (args: Term[]) => {
-      console.log(args[0]);
+      console.log(operations.toString(args[0]));
 
       return true;
     },

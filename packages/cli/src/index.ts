@@ -39,7 +39,7 @@ const runInteractive = (world: World) => {
           const result = world.eval(line);
 
           if (result != null) {
-            stdout.write(`${operations.toString(result)}\n`);
+            stdout.write(`${operations.toSource(result)}\n`);
           }
         } catch (e) {
           if (
