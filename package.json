@@ -11,9 +11,13 @@
     "clean": "lerna run clean",
     "build": "lerna run build",
     "lint": "lerna run lint",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "test:coverage": "lerna run test:coverage",
+    "coverage:aggregate": "lerna-lcov-aggregate"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "coveralls": "^3.1.1",
+    "lerna": "^4.0.0",
+    "lerna-lcov-aggregate": "^1.0.0"
   }
 }
