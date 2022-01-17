@@ -171,10 +171,11 @@ const lexStringLiteral = (state: State): StringLiteralToken => {
 
 const lexIdentifier = (
   state: State,
-  type: "atom" | "variable"
+  type: "atom" | "variable",
+  initialChar: string
 ): AtomToken | VariableToken => {
   const position = { ...state.position };
-  let id = state.read();
+  let id = initialChar;
 
   for (;;) {
     if (state.peek(isAtomPart)) {
@@ -297,15 +298,31 @@ export const lex = (source: string): Token[] => {
       case "'":
         tokens.push(lexStringLiteral(state));
         continue;
+
+      case "\\": {
+        const position = { ...state.position };
+        let c: string;
+
+        state.read();
+        c = lexEscapeSequence(state);
+        if (isAtomStart.test(c)) {
+          tokens.push(lexIdentifier(state, "atom", c));
+        } else if (isAtomPart.test(c)) {
+          tokens.push(lexIdentifier(state, "variable", c));
+        } else {
+          throw state.error("Unexpected escape sequence.", position);
+        }
+        continue;
+      }
     }
 
     if (state.peek(isAtomStart)) {
-      tokens.push(lexIdentifier(state, "atom"));
+      tokens.push(lexIdentifier(state, "atom", state.read()));
       continue;
     }
 
     if (state.peek(isVariableStart)) {
-      tokens.push(lexIdentifier(state, "variable"));
+      tokens.push(lexIdentifier(state, "variable", state.read()));
       continue;
     }
 
