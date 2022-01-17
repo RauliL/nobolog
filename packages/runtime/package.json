@@ -1,6 +1,6 @@
 {
   "name": "@nobolog/runtime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Runtime for Nobolog programming language.",
   "license": "MIT",
   "keywords": [
@@ -34,7 +34,7 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@nobolog/parser": "^0.1.0"
+    "@nobolog/parser": "^0.1.1"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
