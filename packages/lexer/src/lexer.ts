@@ -301,10 +301,11 @@ export const lex = (source: string): Token[] => {
 
       case "\\": {
         const position = { ...state.position };
-        let c: string;
 
         state.read();
-        c = lexEscapeSequence(state);
+
+        const c = lexEscapeSequence(state);
+
         if (isAtomStart.test(c)) {
           tokens.push(lexIdentifier(state, "atom", c));
         } else if (isAtomPart.test(c)) {

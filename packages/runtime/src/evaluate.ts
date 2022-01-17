@@ -196,14 +196,7 @@ const evaluateVisitor: ExpressionVisitor<World, Term> = {
   },
 
   visitVariableExpression(expression: VariableExpression, world: World): Term {
-    const { name } = expression;
-    const value = world.getVariable(name);
-
-    if (!value) {
-      throw new NobologRuntimeError(`Unrecognized variable: \`${name}'`);
-    }
-
-    return value;
+    return world.getVariable(expression.name);
   },
 };
 
