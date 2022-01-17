@@ -179,7 +179,7 @@ const lexIdentifier = (
   for (;;) {
     if (state.peek(isAtomPart)) {
       id += state.read();
-    } else if (state.peek("\\")) {
+    } else if (state.peekRead("\\")) {
       id += lexEscapeSequence(state);
     } else {
       break;
