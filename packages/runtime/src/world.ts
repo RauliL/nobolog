@@ -64,6 +64,10 @@ export class World {
     });
   }
 
+  public getVariable(name: string): Term {
+    return this.currentScope.get(name);
+  }
+
   public setVariable(name: string, value: Term): void {
     this.currentScope.set(name, value);
   }
@@ -89,10 +93,6 @@ export class World {
     });
 
     return result;
-  }
-
-  public getVariable(name: string): Term | undefined {
-    return this.currentScope.get(name);
   }
 
   private pushScope(): Scope {
