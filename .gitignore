@@ -1,4 +1,5 @@
-/packages/*/lib
+/packages/*/dist-*
+/packages/cli/dist
 coverage
 node_modules
 *.log
