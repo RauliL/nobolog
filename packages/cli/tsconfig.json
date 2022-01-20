@@ -1,8 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.cjs.json",
   "compilerOptions": {
-    "declaration": false,
-    "outDir": "./lib"
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "src"
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./src/**/*.test.ts"]
 }
