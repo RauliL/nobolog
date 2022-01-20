@@ -19,8 +19,8 @@
   "main": "./lib/index.js",
   "main:src": "./src/index.ts",
   "files": [
-    "./bin",
-    "./lib"
+    "bin",
+    "dist"
   ],
   "bin": {
     "nobolog": "./bin/nobolog"

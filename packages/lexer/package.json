@@ -21,7 +21,7 @@
   "module": "./dist-es/index.js",
   "types": "./dist-types/index.js",
   "files": [
-    "./dist-*"
+    "dist-*"
   ],
   "engines": {
     "node": ">=12.0"
