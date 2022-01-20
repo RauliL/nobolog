@@ -1,6 +1,6 @@
 {
   "name": "@nobolog/parser",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Parser for Nobolog programming language.",
   "license": "MIT",
   "keywords": [
@@ -39,7 +39,7 @@
     "prepack": "yarn run build"
   },
   "dependencies": {
-    "@nobolog/lexer": "^0.2.0",
+    "@nobolog/lexer": "^0.2.1",
     "tslib": "^2.3.1"
   },
   "devDependencies": {
